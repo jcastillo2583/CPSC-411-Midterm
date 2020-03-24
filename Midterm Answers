@@ -96,28 +96,15 @@ NavigationBar {
 
 #4 SwiftUI Answer
 Struct ContentView: View{
-
         @State private var showingAlert = false
-
         var body: some View{
-
                 Button(“Show Alert: ”){
-
                         self.tapCount+=1
-
                         self.showingAlert = true
-
                 }
-
                 .alert(isPresented: $showingAlert){
-
                         Alert(title: Text(“Tapcount”), message: Text(“\self.tapCount”)),
-
                                 dismissButton: .default(Text(”OK”))
-
                 }
-
         }
-
  }
-
