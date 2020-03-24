@@ -1,0 +1,306 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red155\green35\blue147;\red255\green255\blue255;\red0\green0\blue0;
+\red50\green109\blue116;\red108\green54\blue169;\red57\green0\blue160;\red196\green26\blue22;\red15\green104\blue160;
+\red28\green0\blue207;\red27\green31\blue34;\red255\green255\blue255;\red109\green109\blue109;\red21\green23\blue26;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c60759\c13753\c57628;\csgenericrgb\c100000\c100000\c100000;\csgenericrgb\c0\c0\c0\c85000;
+\csgenericrgb\c19418\c42935\c45455;\csgenericrgb\c42190\c21278\c66379;\csgenericrgb\c22454\c0\c62803;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c5882\c40784\c62745;
+\csgenericrgb\c11000\c0\c81000;\cssrgb\c14118\c16078\c18039;\cssrgb\c100000\c100000\c100000;\cssrgb\c50196\c50196\c50196;\cssrgb\c10588\c12157\c13725\c29804;
+}
+\margl1440\margr1440\vieww20720\viewh18220\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Justin Castillo\
+CPSC 411-02\
+Midterm\
+\
+\
+SWIFT SECTION\
+#1 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\b \cf2 \cb3 for
+\f2\b0 \cf4  str 
+\f1\b \cf2 in
+\f2\b0 \cf4  \cf5 ish\cf4 .\cf6 indices\cf4  \{\
+  \cf6 print\cf4 (\cf7 String\cf4 (format:\cf8 "\\0x%02x"\cf4 , \cf5 ish\cf4 [str].\cf6 unicodeScalars\cf4 .\cf6 first\cf4 !.\cf6 value\cf4 ), terminator: \cf8 " "\cf4 )\
+\}
+\f0 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+#2 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf6 \cb3 print\cf4 (\cf8 "\\u\{4e2d\}\\u\{570d\}"\cf4 )\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \
+#3 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf6 \cb3 print\cf4 (\cf8 "cal state fullerton"\cf4 .\cf6 uppercased\cf4 ())
+\f0 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+#4 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\b \cf2 \cb3 let
+\f2\b0 \cf4  \cf9 newWord\cf4   = \cf5 word\cf4 .\cf6 replacingOccurrences\cf4 (of: \cf8 "[aeiouy]"\cf4 , with: \cf8 "Z"\cf4 , options: [.\cf6 regularExpression\cf4 , .\cf6 caseInsensitive\cf4 ], range: 
+\f1\b \cf2 nil
+\f2\b0 \cf4 )\
+\cf6 print\cf4 (\cf8 "newWord is: \cf4 \\(\cf5 newWord\cf4 )\cf8 "\cf4 )\
+
+\f0 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #5 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\b \cf2 \cb3 let
+\f2\b0 \cf4  \cf9 pref\cf4  = \cf5 sadd\cf4 .\cf6 hasPrefix\cf4 (\cf5 pre\cf4 )\
+\cf6 print\cf4 (\cf8 "\cf4 \\(\cf5 sadd\cf4 )\cf8  has prefix \cf4 \\(\cf5 pre\cf4 )\cf8  is: \cf4 \\(\cf5 pref\cf4  ? \cf8 "YES"\cf4  : \cf8 "no"\cf4 )\cf8 "\cf4  \cf6 +\cf4  \cf8 "\\n\\n"\cf4 )
+\f0 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+#6 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\b \cf2 \cb3 func
+\f2\b0 \cf4  \cf9 handleError\cf4 (
+\f1\b \cf2 _
+\f2\b0 \cf4  code: \cf7 Int\cf4 ) \{\
+  \cf6 print\cf4 (\cf8 "handling error code: \cf4 \\(code)\cf8 ... ===> "\cf4 , terminator: \cf8 " "\cf4 )\
+  
+\f1\b \cf2 switch
+\f2\b0 \cf4 (code) \{\
+\
+
+\f1\b \cf2 case
+\f2\b0 \cf4  \cf10 100\cf4 ,\cf10 101\cf4 : \cf6 print\cf4 (\cf8 "Informational, 1xx"\cf4 )\
+
+\f1\b \cf2 case
+\f2\b0 \cf4  \cf10 204\cf4 : \cf6 print\cf4 (\cf8 "Successful but not content, 204"\cf4 )\
+
+\f1\b \cf2 case
+\f2\b0 \cf4  \cf10 300\cf6 ...\cf10 307\cf4 : \cf6 print\cf4 (\cf8 "Redirection: 3xx"\cf4 )\
+
+\f1\b \cf2 case
+\f2\b0 \cf4  \cf10 400\cf6 ...\cf10 505\cf4 : \cf6 print\cf4 (\cf8 "Server error"\cf4 )\
+\
+  
+\f1\b \cf2 default
+\f2\b0 \cf4 :\
+    \cf6 print\cf4 (\cf8 ""\cf4 );\
+  \}\
+\}\
+
+\f0 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #7 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\b \cf2 \cb3 func
+\f2\b0 \cf4  \cf9 minmax\cf4 (
+\f1\b \cf2 _
+\f2\b0 \cf4  numbers: \cf7 Int\cf4 ...) -> (min: \cf7 Int\cf4 , max: \cf7 Int\cf4 ) \{\
+\
+  
+\f1\b \cf2 var
+\f2\b0 \cf4  min = numbers[\cf10 0\cf4 ]\
+  
+\f1\b \cf2 var
+\f2\b0 \cf4  max = min\
+  
+\f1\b \cf2 for
+\f2\b0 \cf4  i 
+\f1\b \cf2 in
+\f2\b0 \cf4  numbers \{\
+    min = i \cf6 <\cf4  min ? i : min\
+    max = i \cf6 >\cf4  max ? i : max\
+  \}\
+      
+\f1\b \cf2 return
+\f2\b0 \cf4  (min, max)\
+\}\
+
+\f0 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #8 Swift Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\b \cf2 \cb3 func
+\f2\b0 \cf4  \cf9 siftBeans\cf4 (
+\f1\b \cf2 _
+\f2\b0 \cf4  fromGroceryList: [\cf7 String\cf4 ]) -> (beans: [\cf7 String\cf4 ], notbeans: [\cf7 String\cf4 ]) \{\
+\
+    
+\f1\b \cf2 var
+\f2\b0 \cf4  beans = [\cf7 String\cf4 ]()\
+    
+\f1\b \cf2 var
+\f2\b0 \cf4  notbeans  = [\cf7 String\cf4 ]()\
+    
+\f1\b \cf2 for
+\f2\b0 \cf4  item 
+\f1\b \cf2 in
+\f2\b0 \cf4  fromGroceryList \{\
+      
+\f1\b \cf2 if
+\f2\b0 \cf4  (item.\cf6 hasSuffix\cf4 (\cf8 "beans"\cf4 )) \{ beans.\cf6 append\cf4 (item) \}\
+      
+\f1\b \cf2 else
+\f2\b0 \cf4  \{ notbeans.\cf6 append\cf4 (item) \}\
+    \}\
+    
+\f1\b \cf2 return
+\f2\b0 \cf4  (beans, notbeans)\
+\}\
+\cf6 print\cf4 (\cf8 "\\nrunning function siftBeans()..."\cf4 )\
+
+\f1\b \cf2 let
+\f2\b0 \cf4  \cf9 result\cf4  = \cf5 siftBeans\cf4 ([\cf8 "green beans"\cf4 , \cf8 "milk"\cf4 , \cf8 "black beans"\cf4 , \cf8 "pinto beans"\cf4 , \cf8 "apples"\cf4 ])\
+\cf6 print\cf4 (\cf8 "result.beans = \cf4 \\(\cf5 result\cf4 .beans)\cf8 "\cf4 )\
+\cf6 print\cf4 (\cf8 "result.notbeans = \cf4 \\(\cf5 result\cf4 .notbeans)\cf8 \\n"\cf4 )\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 SWIFT UI SECTION\
+#1 SwiftUI Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf7 \cb3 Text\cf4 (\cf8 "I'm an IOS \\nDeveloper!"\cf4 )\
+        .\cf6 padding\cf4 ()\
+            .\cf6 background\cf4 (\cf7 Color\cf4 .\cf6 red\cf4 )\
+        .\cf6 padding\cf4 ()\
+            .\cf6 background\cf4 (\cf7 Color\cf4 .\cf6 blue\cf4 )\
+        .\cf6 padding\cf4 ()\
+        .\cf6 padding\cf4 ()\
+            .\cf6 background\cf4 (\cf7 Color\cf4 .\cf6 green\cf4 )
+\f0 \cf0 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+#2 SwiftUI Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf7 \cb3 Button\cf4 (\cf8 "Hello, world!"\cf4 )\
+            .frame(width: \cf10 200\cf4 , height: \cf10 200\cf4 )\
+            .background(\cf7 Color\cf4 .red)
+\f0 \cf0 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #3 SwiftUI Answer\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf4 \cb3 NavigationBar \{\
+            \cf7 Form\cf4  \{\
+                \cf7 Section\cf4  \{\
+                    Text(\cf8 "Hello, World"\cf4 )\
+                    Text(\cf8 "Hello, World"\cf4 )\
+                \}\
+                Section \{Text(\cf8 "Hello, World"\cf4 ) \}\
+                .navigationBarTitle(\cf8 "SwiftUI"\cf4 )
+\f0 \cf0 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 #4 SwiftUI Answer\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4012\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth4012\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+
+\f2 \cf11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 Struct ContentView: View\{\cf14 \strokec14 \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11         @State private var showingAlert = false\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11         var body: some View\{\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                 Button(\'93Show Alert: \'94)\{\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                         self.tapCount+=1\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                         self.showingAlert = true\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                 \}\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                 .alert(isPresented: $showingAlert)\{\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                         Alert(title: Text(\'93Tapcount\'94), message: Text(\'93\\self.tapCount\'94)),\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                                 dismissButton: .default(Text(\'94OK\'94))\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11                 \}\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11         \}\cf14 \strokec14 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat12 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth13115\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\cell
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf11 \strokec11  \}\cell \lastrow\row
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+}
