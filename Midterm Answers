@@ -1,0 +1,123 @@
+Justin Castillo
+CPSC 411-02
+Midterm
+
+
+SWIFT SECTION
+#1 Swift Answer
+for str in ish.indices {
+  print(String(format:"\0x%02x", ish[str].unicodeScalars.first!.value), terminator: " ")
+}
+
+#2 Swift Answer
+print("\u{4e2d}\u{570d}")
+
+#3 Swift Answer
+print("cal state fullerton".uppercased())
+
+#4 Swift Answer
+let newWord  = word.replacingOccurrences(of: "[aeiouy]", with: "Z", options: [.regularExpression, .caseInsensitive], range: nil)
+print("newWord is: \(newWord)")
+
+#5 Swift Answer
+let pref = sadd.hasPrefix(pre)
+print("\(sadd) has prefix \(pre) is: \(pref ? "YES" : "no")" + "\n\n")
+
+#6 Swift Answer
+func handleError(_ code: Int) {
+  print("handling error code: \(code)... ===> ", terminator: " ")
+  switch(code) {
+
+case 100,101: print("Informational, 1xx")
+case 204: print("Successful but not content, 204")
+case 300...307: print("Redirection: 3xx")
+case 400...505: print("Server error")
+
+  default:
+    print("");
+  }
+}
+
+#7 Swift Answer
+func minmax(_ numbers: Int...) -> (min: Int, max: Int) {
+
+  var min = numbers[0]
+  var max = min
+  for i in numbers {
+    min = i < min ? i : min
+    max = i > max ? i : max
+  }
+      return (min, max)
+}
+
+#8 Swift Answer
+func siftBeans(_ fromGroceryList: [String]) -> (beans: [String], notbeans: [String]) {
+
+    var beans = [String]()
+    var notbeans  = [String]()
+    for item in fromGroceryList {
+      if (item.hasSuffix("beans")) { beans.append(item) }
+      else { notbeans.append(item) }
+    }
+    return (beans, notbeans)
+}
+print("\nrunning function siftBeans()...")
+let result = siftBeans(["green beans", "milk", "black beans", "pinto beans", "apples"])
+print("result.beans = \(result.beans)")
+print("result.notbeans = \(result.notbeans)\n")
+
+
+
+SWIFT UI SECTION
+#1 SwiftUI Answer
+Text("I'm an IOS \nDeveloper!")
+        .padding()
+            .background(Color.red)
+        .padding()
+            .background(Color.blue)
+        .padding()
+        .padding()
+            .background(Color.green)
+
+#2 SwiftUI Answer
+Button("Hello, world!")
+            .frame(width: 200, height: 200)
+            .background(Color.red)
+
+#3 SwiftUI Answer
+NavigationBar {
+            Form {
+                Section {
+                    Text("Hello, World")
+                    Text("Hello, World")
+                }
+                Section {Text("Hello, World") }
+                .navigationBarTitle("SwiftUI")
+
+#4 SwiftUI Answer
+Struct ContentView: View{
+
+        @State private var showingAlert = false
+
+        var body: some View{
+
+                Button(“Show Alert: ”){
+
+                        self.tapCount+=1
+
+                        self.showingAlert = true
+
+                }
+
+                .alert(isPresented: $showingAlert){
+
+                        Alert(title: Text(“Tapcount”), message: Text(“\self.tapCount”)),
+
+                                dismissButton: .default(Text(”OK”))
+
+                }
+
+        }
+
+ }
+
